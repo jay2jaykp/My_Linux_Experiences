@@ -12,3 +12,11 @@ This should work.
 ### Reference 
 1. Razer Blade Screen flicker: https://github.com/rolandguelle/razer-blade-stealth-linux/issues/7#issuecomment-344150633
 2. How to change kernel boot parameter: https://askubuntu.com/questions/19486/how-do-i-add-a-kernel-boot-parameter
+
+
+## Trackpad pointer jumps unevenly
+This is also an issue I have faced with the first boot of Ubuntu. But after installing Microcode as per the suggestion of same [github project](https://github.com/rolandguelle/razer-blade-stealth-linux#install), running ```sudo apt install intel-microcode``` fix the problem.
+This should work.
+### Reference
+1. Razer Blade Linux: https://github.com/rolandguelle/razer-blade-stealth-linux#install
+
