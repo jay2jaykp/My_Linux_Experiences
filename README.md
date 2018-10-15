@@ -1,5 +1,4 @@
-# My_Linux_Experiences  
-I am learning Ubuntu and noting down each issue and experience
+#Issues
 
 ## Screen Flickering Issue
 I have noticed extreme screen flickering in my PC when installed Ubuntu 18.04 (do not know about previous version though). A signle google search lead me to [github issue link](https://github.com/rolandguelle/razer-blade-stealth-linux/issues/7#issuecomment-344150633) that solved the issue. 
