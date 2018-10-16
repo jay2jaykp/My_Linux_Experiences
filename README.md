@@ -45,3 +45,7 @@ as root.
 
 where: suplibOsInit what: 3 VERR_VM_DRIVER_NOT_INSTALLED (-1908) - The support driver is not installed. On linux, open returned ENOENT. 
 ```
+Installing VirtualBox by downloading and running was a bad idea I suppose.
+
+Quick fix was to run ```sudo apt-get install virtualbox``` and run ```virtualbox```
+This should work.
