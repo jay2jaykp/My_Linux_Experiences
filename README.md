@@ -34,4 +34,11 @@ This should works.
 ## VirtualBox
 Downlaod .deb file from Oracle V box [official website](https://www.oracle.com/technetwork/server-storage/virtualbox/downloads/index.html)
 Double click and isntall.
-This should works.
+It is raising an error as below when I run any irtual environment.
+
+```
+Kernel driver not installed (rc=-1908) 
+The VirtualBox Linux kernel driver (vboxdrv) is either not loaded or there is a permission problem with /dev/vboxdrv. Please reinstall the kernel module by executing 
+'/sbin/vboxconfig'
+as root. If it is available in your distribution, you should install the DKMS package first. This package keeps track of Linux kernel changes and recompiles the vboxdrv kernel module if necessary.
+```
