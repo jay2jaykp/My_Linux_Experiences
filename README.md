@@ -29,3 +29,9 @@ Still Pending...
 
 ## Google Chrome
 Google Chrome is a must have web browser in my opinion. Initially, not seeing it in Ubuntu App Store dissapointed me but then I found out that it needs to be installed through normal downloading the .deb file and install it. 
+This should works.
+
+## VirtualBox
+Downlaod .deb file from Oracle V box [official website](https://www.oracle.com/technetwork/server-storage/virtualbox/downloa ds/index.html)
+Double click and isntall.
+This should works.
