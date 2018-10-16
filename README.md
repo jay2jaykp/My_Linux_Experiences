@@ -32,6 +32,6 @@ Google Chrome is a must have web browser in my opinion. Initially, not seeing it
 This should works.
 
 ## VirtualBox
-Downlaod .deb file from Oracle V box [official website](https://www.oracle.com/technetwork/server-storage/virtualbox/downloa ds/index.html)
+Downlaod .deb file from Oracle V box [official website](https://www.oracle.com/technetwork/server-storage/virtualbox/downloads/index.html)
 Double click and isntall.
 This should works.
