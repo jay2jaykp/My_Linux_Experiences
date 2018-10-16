@@ -19,3 +19,13 @@ This should work.
 ### Reference
 1. Razer Blade Linux: https://github.com/rolandguelle/razer-blade-stealth-linux#install
 
+## Everything Froze
+While writing this repository, my ubuntu stopped working suddenly and froze the whole system including mouse and keyboard. Quick google search led to [askubuntu forum](https://askubuntu.com/questions/4408/what-should-i-do-when-ubuntu-freezes) but the solution requires the ```SysRq``` key but Razer Blade Stealth does not have that.
+Still Pending...
+### Reference
+1. Frozen ubuntu: https://askubuntu.com/questions/4408/what-should-i-do-when-ubuntu-freezes
+
+# Installation
+
+## Google Chrome
+Google Chrome is a must have web browser in my opinion. Initially, not seeing it in Ubuntu App Store dissapointed me but then I found out that it needs to be installed through normal downloading the .deb file and install it. 
