@@ -49,3 +49,94 @@ Installing VirtualBox by downloading and running was a bad idea I suppose.
 
 Quick fix was to run ```sudo apt-get install virtualbox``` and run ```virtualbox```
 This should work.
+
+## Flashing Android ROM
+One thing I often do is flashing custom ROMs to my OneplusOne device. I needed to get the access of storage system of mobile device in my ubuntu system when it is on fastboot mode or recovery mode. One thing perticularly I wanted is to access internal storage once fully wiped down in recovery to add the rom at that point of time (for fresh install).
+
+I forund this amazing [amazing](http://bernaerts.dyndns.org/linux/74-ubuntu/354-ubuntu-xenial-android-adb-fastboot-qtadb) that allow me to install appropriate drivers and tools. I have run the code as it is given in the page but for the sake of preservation I will note them down here.
+
+1. Install Android Tools
+```sudo apt-get install android-tools-adb android-tools-fastboot```
+2. Update to latest ADB and fastboot
+```
+#check adb version before
+adb version
+
+wget https://dl.google.com/android/repository/platform-tools-latest-linux.zip
+
+sudo unzip -d /usr/local/sbin platform-tools-latest-linux.zip
+
+sudo wget -O /usr/local/sbin/adb https://raw.githubusercontent.com/NicolasBernaerts/ubuntu-scripts/master/android/adb
+
+sudo wget -O /usr/local/sbin/fastboot https://raw.githubusercontent.com/NicolasBernaerts/ubuntu-scripts/master/android/fastboot
+
+sudo chmod +x /usr/local/sbin/platform-tools/adb /usr/local/sbin/adb
+
+sudo chmod +x /usr/local/sbin/platform-tools/fastboot /usr/local/sbin/fastboot
+
+#check adb version after
+adb version
+```
+3. Declare vendor ID for ADB
+I think it is not necessary for me as my phone is old enough (5 year old to be precise) to recognized by any version of adb as of 2018.
+But I would note down to code regardless.
+```
+mkdir --parent $HOME/.android
+
+wget -O $HOME/.android/adb_usb.ini https://raw.githubusercontent.com/NicolasBernaerts/ubuntu-scripts/master/android/adb_usb.ini
+```
+4. Setup ADB Udev Rule 
+Your device ned to be in USB debugging mode for the next step.
+```lsusb```
+You should found your phone in the list.
+```
+sudo wget -O /etc/udev/rules.d/51-android.rules https://raw.githubusercontent.com/NicolasBernaerts/ubuntu-scripts/master/android/51-android.rules
+
+sudo chmod a+r /etc/udev/rules.d/51-android.rules
+
+sudo service udev restart
+```
+5. Allow ADB trusted connection
+```adb devices```
+Allow the request of adb in your phone and rerun the command for your pc to recognize the device.
+6. Install QtADB
+Prerequisite: Your phone needs to be rooted and install app [BusyBox](https://play.google.com/store/apps/details?id=stericson.busybox)
+Run the following command to confirm the BusyBox install.
+```adb shell busybox ls -l -a```
+
+Installation process
+```
+sudo apt-get -y install libqtgui4 libqt4-network libqt4-declarative
+
+wget -O qtadb.tar.gz http://motyczko.pl/qtadb/QtADB_0.8.1_linux64.tar.gz
+
+tar -xvf qtadb.tar.gz
+
+sudo mv ./QtADB*/QtADB /usr/local/sbin/qtadb
+
+sudo chmod +x /usr/local/sbin/qtadb
+
+rm qtadb.tar.gz
+
+rm -R QtADB*
+```
+
+7. It might crash at this point when run the following
+```qtadb```
+
+fix this crash by following
+```
+mkdir --parents $HOME/.config/Bracia
+
+wget $HOME/.config/Bracia/QtADB.conf https://raw.githubusercontent.com/NicolasBernaerts/ubuntu-scripts/master/android/QtADB.conf
+```
+rerun the above command to confirm fix.
+8. Create application launcher with icon and place in all applications
+```
+sudo wget -O /usr/share/icons/qtadb.png https://github.com/NicolasBernaerts/ubuntu-scripts/raw/master/android/qtadb.png
+
+sudo wget -O /usr/share/applications/qtadb.desktop https://raw.githubusercontent.com/NicolasBernaerts/ubuntu-scripts/master/android/qtadb.desktop
+```
+
+### Reference
+1. Ubuntu 16.04 LTS - Install Android Tools (ADB, Fastboot & QtADB) By Nicolas Bernaerts : http://bernaerts.dyndns.org/linux/74-ubuntu/354-ubuntu-xenial-android-adb-fastboot-qtadb
