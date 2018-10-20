@@ -1,5 +1,9 @@
 # Issues
-## SSD Optimizatio in Ubuntu
+
+##Privacy in Ubuntu
+
+
+## SSD Optimization in Ubuntu
 This is a real thing. I did not know about it before I search for how to partition Ubuntu and there were dispute in the resources that I fouind between only SSD and hybrid drives (SSD + HDD). Some mentioned TRIM (i dont know what it is) to be enable and some ignores it all along. Some say do not use SWAP as it wears down the SSD and some say it is OK. Here some guides that I think should be informative and trustworthy however I haven't found any official <b>best practice on partitioning SSD for Ubuntu</b>.
 1. https://www.youtube.com/watch?v=8OKjSOUgLJU this video is on point. must watch.
 2. https://help.ubuntu.com/community/PartitioningSchemes this is official ubuntu community guide but no mention of SSD only setups. Very dissapointing.
