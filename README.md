@@ -1,4 +1,9 @@
 # Issues
+## SSD Optimizatio in Ubuntu
+This is a real thing. I did not know about it before I search for how to partition Ubuntu and there were dispute in the resources that I fouind between only SSD and hybrid drives (SSD + HDD). Some mentioned TRIM (i dont know what it is) to be enable and some ignores it all along. Some say do not use SWAP as it wears down the SSD and some say it is OK. Here some guides that I think should be informative and trustworthy however I haven't found any official <b>best practice on partitioning SSD for Ubuntu</b>.
+1. https://www.youtube.com/watch?v=8OKjSOUgLJU this video is on point. must watch.
+2. https://help.ubuntu.com/community/PartitioningSchemes this is official ubuntu community guide but no mention of SSD only setups. Very dissapointing.
+3. https://sites.google.com/site/easylinuxtipsproject/ssd this is a very extensive resource but not for ubuntu but linuxMint. I think it should be more or less same.
 
 ## Screen Flickering Issue
 I have noticed extreme screen flickering in my PC when installed Ubuntu 18.04 (do not know about previous version though). A signle google search lead me to [github issue link](https://github.com/rolandguelle/razer-blade-stealth-linux/issues/7#issuecomment-344150633) that solved the issue. 
@@ -21,6 +26,12 @@ This should work.
 
 ## Everything Froze
 While writing this repository, my ubuntu stopped working suddenly and froze the whole system including mouse and keyboard. Quick google search led to [askubuntu forum](https://askubuntu.com/questions/4408/what-should-i-do-when-ubuntu-freezes) but the solution requires the ```SysRq``` key but Razer Blade Stealth does not have that.
+
+I have tweeted to [@rolandguelle](https://twitter.com/rolandguelle) asking some help for the guide available to best partitioning practice for SSD only PCs.
+Found two links that explain the partitioning on SSD.
+1. https://sites.google.com/site/easylinuxtipsproject/ssd (I find this one more useful as per my understanding level of Ubuntu and hardware-software in general)
+2. http://www.ocsmag.com/2016/04/30/using-solid-state-drives-on-linux/
+
 Still Pending...
 ### Reference
 1. Frozen ubuntu: https://askubuntu.com/questions/4408/what-should-i-do-when-ubuntu-freezes
