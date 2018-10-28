@@ -15,6 +15,7 @@ I have noticed extreme screen flickering in my PC when installed Ubuntu 18.04 (d
 - ```sudo nano /etc/default/grub```
 - change the line ```GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"``` to ```GRUB_CMDLINE_LINUX_DEFAULT="quiet splash i915.enable_rc6=0"``` 
 - save the file with ```ctrl + O``` and exit the editor with ```ctrl + x```
+- ```sudo update-grub```
 - reboot the PC
 This should work.
 ### Reference 
